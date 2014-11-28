@@ -146,6 +146,10 @@ public class MailDetail extends BaseFragment implements
 					&& parent.getString("message_title") != "false")
 				OControls.setText(mView, R.id.txvDetailSubject,
 						parent.getString("message_title"));
+			if (parent.getString("model").equals("false"))
+				OControls.setVisible(mView, R.id.btnStartFullComposeMode);
+			else
+				OControls.setInvisible(mView, R.id.btnStartFullComposeMode);
 
 		}
 	}

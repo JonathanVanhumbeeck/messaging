@@ -177,7 +177,8 @@ public class MailSyncService extends OSyncService implements
 			kwargs.put("parent_id", parent.getInt("id"));
 			kwargs.put("attachment_ids", attachment_ids);
 			kwargs.put("partner_ids", new JSONArray().put(partner_ids));
-
+			kwargs.put("type", "comment");
+			kwargs.put("subtype", "mail.mt_comment");
 			OArguments args = new OArguments();
 			args.add(new JSONArray().put(res_id));
 			Integer messageId = (Integer) helper.callMethod(model, method,

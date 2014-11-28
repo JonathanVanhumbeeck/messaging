@@ -296,12 +296,19 @@ public class MailMessage extends OModel {
 	public String getPartnersName(ODataRow row) {
 		String partners = "to ";
 		List<String> partners_name = new ArrayList<String>();
-		for (ODataRow p : row.getM2MRecord("partner_ids").browseEach()) {
-			if (partners_name.size() < 10) {
-				partners_name.add(p.getString("name"));
+		List<ODataRow> partners_list = row.getM2MRecord("partner_ids")
+				.browseEach();
+		if (partners_list.size() > 0) {
+			for (ODataRow p : partners_list) {
+				if (partners_name.size() < 10) {
+					partners_name.add(p.getString("name"));
+				}
 			}
+			partners = partners + TextUtils.join(", ", partners_name);
+		} else {
+			partners += "followers";
 		}
-		return partners + TextUtils.join(", ", partners_name);
+		return partners;
 	}
 
 	public String getVoteCounter(ODataRow row) {

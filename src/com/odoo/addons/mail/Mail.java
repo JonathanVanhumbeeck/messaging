@@ -447,10 +447,9 @@ public class Mail extends BaseFragment implements OnRefreshListener,
 		}
 		OControls.setImage(mView, R.id.emptyListIcon, icon);
 		OControls.setText(mView, R.id.emptyListMessage, _s(str));
-		if (mType != Type.Outbox)
-			mView.findViewById(R.id.checkForNewData).setOnClickListener(this);
-		else
+		if (mType == Type.Outbox)
 			mView.findViewById(R.id.checkForNewData).setVisibility(View.GONE);
+		mView.findViewById(R.id.checkForNewData).setOnClickListener(this);
 	}
 
 	private void restartLoader() {
