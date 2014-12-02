@@ -37,10 +37,10 @@ import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentTransaction;
+import android.support.v7.widget.Toolbar;
 import android.util.Log;
 import android.view.Menu;
 import android.view.View;
-import android.widget.ListView;
 import android.widget.Toast;
 
 import com.odoo.addons.mail.MailDetail;
@@ -77,7 +77,20 @@ public class MainActivity extends BaseActivity implements FragmentListener {
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_main);
-		getActionbar().setIcon(R.drawable.ic_odoo_o);
+		if (findViewById(R.id.fragment_detail_container) != null) {
+			findViewById(R.id.fragment_detail_container).setVisibility(
+					View.GONE);
+			mTwoPane = true;
+		}
+		if (isTwoPane()) {
+			setSubToolBar((Toolbar) findViewById(R.id.toolbar));
+			setToolBar((Toolbar) findViewById(R.id.tablet_toolbar));
+			setTitle("");
+		} else {
+			setToolBar((Toolbar) findViewById(R.id.toolbar));
+		}
+		if (getToolBar() == null)
+			setActionBarIcon(R.drawable.ic_odoo_o);
 		mContext = this;
 		mFragment = getSupportFragmentManager();
 		initTouchListener();
@@ -119,11 +132,6 @@ public class MainActivity extends BaseActivity implements FragmentListener {
 
 	public void onTaskDone(Bundle savedInstanceState) {
 		initDrawerControls();
-		if (findViewById(R.id.fragment_detail_container) != null) {
-			findViewById(R.id.fragment_detail_container).setVisibility(
-					View.GONE);
-			mTwoPane = true;
-		}
 		if (savedInstanceState != null) {
 			return;
 		}
@@ -589,18 +597,6 @@ public class MainActivity extends BaseActivity implements FragmentListener {
 			}
 		}
 		return false;
-	}
-
-	public void setViewAutoHide(ListView listView, View view) {
-		registerHideableHeaderView(view);
-		enableActionBarAutoHide(listView);
-		hideActionBar(false);
-	}
-
-	public void setActionbarAutoHide(ListView listView) {
-		Log.v(TAG, "setActionbarAutoHide");
-		enableActionBarAutoHide(listView);
-		hideActionBar(true);
 	}
 
 	/**

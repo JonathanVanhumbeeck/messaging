@@ -79,7 +79,8 @@
         <activity
             android:name="com.odoo.addons.mail.ComposeMail"
             android:icon="@drawable/ic_odoo_o"
-            android:label="@string/title_mail_compose" >
+            android:label="@string/title_mail_compose"
+            android:theme="@style/SettingActivity" >
             <intent-filter
                 android:icon="@drawable/ic_launcher"
                 android:label="@string/label_odoo_mail" >
