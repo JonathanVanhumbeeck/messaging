@@ -41,12 +41,12 @@ import android.webkit.MimeTypeMap;
 import android.widget.Toast;
 
 import com.odoo.App;
+import com.odoo.R;
 import com.odoo.orm.OColumn;
 import com.odoo.orm.ODataRow;
 import com.odoo.orm.OValues;
 import com.odoo.util.Base64Helper;
 import com.odoo.util.ODate;
-import com.odoo.R;
 
 public class Attachments implements OnClickListener {
 	public static final String TAG = Attachments.class.getSimpleName();

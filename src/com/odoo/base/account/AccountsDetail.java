@@ -37,6 +37,7 @@ import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
 
+import com.odoo.R;
 import com.odoo.auth.OdooAccountManager;
 import com.odoo.base.login_signup.LoginSignup;
 import com.odoo.orm.ODataRow;
@@ -45,7 +46,6 @@ import com.odoo.support.OUser;
 import com.odoo.support.fragment.BaseFragment;
 import com.odoo.util.OControls;
 import com.odoo.util.drawer.DrawerItem;
-import com.odoo.R;
 
 public class AccountsDetail extends BaseFragment implements
 		BeforeListRowCreateListener, OnListRowViewClickListener {

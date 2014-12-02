@@ -16,11 +16,11 @@ import android.widget.ListView;
 import android.widget.RemoteViews;
 
 import com.odoo.MainActivity;
+import com.odoo.R;
 import com.odoo.addons.mail.ComposeMail;
 import com.odoo.support.OUser;
 import com.odoo.support.listview.OListAdapter;
 import com.odoo.widgets.WidgetHelper;
-import com.odoo.R;
 
 public class MailWidget extends AppWidgetProvider {
 

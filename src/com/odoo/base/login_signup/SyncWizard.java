@@ -43,12 +43,12 @@ import android.widget.RadioGroup;
 import android.widget.TextView;
 
 import com.odoo.MainActivity;
+import com.odoo.R;
 import com.odoo.config.SyncWizardValues;
 import com.odoo.support.AppScope;
 import com.odoo.support.SyncValue;
 import com.odoo.support.fragment.BaseFragment;
 import com.odoo.util.drawer.DrawerItem;
-import com.odoo.R;
 
 public class SyncWizard extends BaseFragment {
 

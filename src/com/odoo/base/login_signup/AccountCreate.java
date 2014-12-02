@@ -22,6 +22,7 @@ import android.widget.AdapterView;
 import android.widget.AdapterView.OnItemClickListener;
 
 import com.odoo.App;
+import com.odoo.R;
 import com.odoo.auth.OdooAccountManager;
 import com.odoo.base.ir.IrModel;
 import com.odoo.orm.OdooHelper;
@@ -34,7 +35,6 @@ import com.odoo.util.OControls;
 import com.odoo.util.PreferenceManager;
 import com.odoo.util.controls.ExpandableHeightGridView;
 import com.odoo.util.drawer.DrawerItem;
-import com.odoo.R;
 
 public class AccountCreate extends BaseFragment implements OnItemClickListener {
 

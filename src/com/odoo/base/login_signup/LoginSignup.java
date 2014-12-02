@@ -28,6 +28,7 @@ import android.widget.Spinner;
 import android.widget.Toast;
 
 import com.odoo.App;
+import com.odoo.R;
 import com.odoo.auth.OdooAccountManager;
 import com.odoo.orm.OdooHelper;
 import com.odoo.support.AppScope;
@@ -37,7 +38,6 @@ import com.odoo.support.fragment.BaseFragment;
 import com.odoo.support.fragment.FragmentListener;
 import com.odoo.util.OControls;
 import com.odoo.util.drawer.DrawerItem;
-import com.odoo.R;
 
 public class LoginSignup extends BaseFragment implements OnClickListener,
 		OnFocusChangeListener {

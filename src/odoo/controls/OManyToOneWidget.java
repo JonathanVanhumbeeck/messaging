@@ -36,12 +36,12 @@ import android.widget.AdapterView.OnItemSelectedListener;
 import android.widget.LinearLayout;
 import android.widget.Spinner;
 
+import com.odoo.R;
 import com.odoo.orm.OColumn;
 import com.odoo.orm.OColumn.ColumnDomain;
 import com.odoo.orm.ODataRow;
 import com.odoo.orm.OModel;
 import com.odoo.support.listview.OListAdapter;
-import com.odoo.R;
 
 /**
  * The Class OManyToOneWidget.

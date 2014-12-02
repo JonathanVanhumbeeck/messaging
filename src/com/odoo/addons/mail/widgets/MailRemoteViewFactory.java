@@ -17,6 +17,7 @@ import android.util.Log;
 import android.widget.RemoteViews;
 import android.widget.RemoteViewsService.RemoteViewsFactory;
 
+import com.odoo.R;
 import com.odoo.addons.mail.Mail;
 import com.odoo.addons.mail.models.MailMessage;
 import com.odoo.orm.OColumn;
@@ -24,7 +25,6 @@ import com.odoo.support.OUser;
 import com.odoo.util.Base64Helper;
 import com.odoo.util.ODate;
 import com.odoo.widgets.WidgetHelper;
-import com.odoo.R;
 
 public class MailRemoteViewFactory implements RemoteViewsFactory {
 

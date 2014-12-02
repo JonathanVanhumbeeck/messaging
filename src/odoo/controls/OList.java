@@ -46,10 +46,10 @@ import android.widget.ScrollView;
 import android.widget.SearchView.OnQueryTextListener;
 import android.widget.TextView;
 
+import com.odoo.R;
 import com.odoo.orm.ODataRow;
 import com.odoo.support.listview.OListAdapter;
 import com.odoo.support.listview.OListAdapter.OnSearchChange;
-import com.odoo.R;
 
 /**
  * The Class OList.

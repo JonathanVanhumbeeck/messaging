@@ -48,12 +48,12 @@ import android.util.Base64;
 import android.util.Log;
 import android.widget.Toast;
 
+import com.odoo.R;
 import com.odoo.orm.ODataRow;
 import com.odoo.orm.OModel;
 import com.odoo.orm.OSyncHelper;
 import com.odoo.orm.OValues;
 import com.odoo.orm.OdooHelper;
-import com.odoo.R;
 
 /**
  * The Class AttachmentFragment.
